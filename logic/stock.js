@@ -40,5 +40,13 @@ module.exports = {
                 }
             })
             .catch(err => console.error(err));
+    },
+    insertShopifyRecords: async function (data) {
+        let shopify_record;
+        data.map(async stock => {
+            shopify_record = await db.shopifyCollection.findOne({ sku: `${stock.sku}` });
+            if (!shopify_record)
+                await db.shopifyCollection.insertOne(stock);
+        });
     }
 };
