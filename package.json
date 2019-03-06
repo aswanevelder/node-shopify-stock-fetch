@@ -1,0 +1,24 @@
+{
+  "name": "shopify-stock-fetch",
+  "version": "1.0.0",
+  "description": "NodeJS function to fetch all products and variations from Shopify and store in a MongoDB database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswanevelder/node-shopify-stock-fetch.git"
+  },
+  "keywords": [
+    "node",
+    "mongodb",
+    "shopify"
+  ],
+  "author": "Anton Swanevelder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswanevelder/node-shopify-stock-fetch/issues"
+  },
+  "homepage": "https://github.com/aswanevelder/node-shopify-stock-fetch#readme"
+}
