@@ -8,8 +8,7 @@ NodeJS function to fetch all products and variations from Shopify and store in a
 **SHOPIFY_PASSWORD**: Generated Private App API Password\
 **SHOPIFY_DBURL**: MongoDB Url\
 **SHOPIFY_DBNAME**: MongoDB Database name\
-**SHOPIFY_COLLECTIONNAME**: MongoDB Database Collection name for Shopify Stock\
-**STORE_COLLECTIONNAME**: MongoDB Database Collection name for Store Stock
+**SHOPIFY_COLLECTIONNAME**: MongoDB Database Collection name for Shopify Stock
 
 **MongoDB Shopify Stock table definition**
 
