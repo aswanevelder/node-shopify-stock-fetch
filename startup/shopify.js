@@ -40,6 +40,6 @@ module.exports = {
         });
     },
     list: function (since_id) {
-        return shopify.product.list({ limit: 50, since_id: since_id });
+        return shopify.product.list({ limit: 250, since_id: since_id });
     }
 }

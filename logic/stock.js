@@ -35,18 +35,15 @@ module.exports = {
                 }
                 else {
                     console.log('Finished collecting data from Shopify');
-                    const collectionCount = await db.shopifyCollection.countDocuments();
-                    console.log(`${collectionCount} records in total.`);
                 }
             })
             .catch(err => console.error(err));
     },
     insertShopifyRecords: async function (data) {
-        let shopify_record;
-        data.map(async stock => {
-            shopify_record = await db.shopifyCollection.findOne({ sku: `${stock.sku}` });
-            if (!shopify_record)
-                await db.shopifyCollection.insertOne(stock);
-        });
+        await db.shopifyCollection.insertMany(data);
+    },
+    finalise: async function () {
+        console.log("Waiting for DB to complete.")
+        setTimeout(() => { db.client.close(); console.log("Done"); }, 60000);
     }
 };
